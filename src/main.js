@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Promise from 'bluebird';
+import sdk from './sdk';
 
-Vue.config.productionTip = false
+Promise.config({
+  cancellation: true,
+});
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+console.log('sdkPromise', sdk);

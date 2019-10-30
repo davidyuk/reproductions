@@ -1,39 +1,44 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <template v-for="url in urls">
+      <button @click="spend(url)">{{ url }}</button>
+      <br>
+    </template>
   </div>
 </template>
 
 <script>
+import { Universal } from '@aeternity/aepp-sdk/es';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: () => ({
+    urls: ['https://node.testnet.aeternal.io', 'https://testnet.aeternal.io', 'https://sdk-testnet.aepps.com'],
+  }),
+  methods: {
+    async spend(url) {
+      console.warn(url);
+      const address = 'ak_23XqqJaRuURJAhkxFZYQkSk4MPCoyKMF2WKPqKdmyHCbYCwH66';
+      const sdk = await Universal({
+        url,
+        internalUrl: url,
+        keypair: {
+          secretKey: '8e0385e2190848e98b04c5a611bb8b8b7c3060c7950be5b0e7ef24ee45b452348971dbd88292bbbfaf8e6d519f8cda4c5bb57f33003479a5f07e53cf6c92808e',
+          publicKey: address,
+        },
+        address,
+      });
+
+      console.log('balance', await sdk.balance(address));
+      try {
+        console.log(await sdk.spend(1000, 'ak_2swhLkgBPeeADxVTAVCJnZLY5NZtCFiM93JxsEaMuC59euuFRQ'));
+      } catch (e) {
+        console.error('error', e);
+      }
+    }
   }
 }
 </script>

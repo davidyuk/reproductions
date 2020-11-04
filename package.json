@@ -4,20 +4,25 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "ssr:build": "vue-cli-service ssr:build",
+    "ssr:serve": "vue-cli-service ssr:serve",
+    "ssr:start": "cross-env NODE_ENV=production vue-cli-service ssr:serve --mode production"
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-router": "^3.2.0",
+    "vue-server-renderer": "^2.6.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@akryum/vue-cli-plugin-ssr": "~0.6.0",
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-router": "^4.5.8",
     "@vue/cli-plugin-vuex": "^4.5.8",
     "@vue/cli-service": "~4.3.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "> 1%",

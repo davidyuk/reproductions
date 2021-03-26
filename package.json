@@ -7,11 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@aeternity/aepp-sdk": "github:aeternity/aepp-sdk-js#develop",
+    "@aeternity/aepp-sdk": "github:aeternity/aepp-sdk-js#feature/typescript-support",
     "core-js": "^3.9.1",
     "es6-shim": "^0.35.6",
-    "vue": "^2.6.12",
-    "weakmap-polyfill": "^2.0.3"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.12",

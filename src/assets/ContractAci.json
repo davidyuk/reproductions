@@ -1,0 +1,974 @@
+[
+  {
+    "namespace": {
+      "name": "Lib",
+      "type_defs": [
+        {
+          "name": "data",
+          "typedef": "int",
+          "vars": []
+        }
+      ]
+    }
+  },
+  {
+    "contract": {
+      "functions": [
+        {
+          "arguments": [
+            {
+              "name": "_1",
+              "type": "int"
+            }
+          ],
+          "name": "test_remote",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        }
+      ],
+      "kind": "contract_interface",
+      "name": "RemoteTest",
+      "payable": false,
+      "type_defs": []
+    }
+  },
+  {
+    "contract": {
+      "functions": [
+        {
+          "arguments": [],
+          "name": "init",
+          "payable": false,
+          "returns": "WithInit.state",
+          "stateful": false
+        }
+      ],
+      "kind": "contract_child",
+      "name": "WithInit",
+      "payable": false,
+      "state": {
+        "record": [
+          {
+            "name": "v",
+            "type": "string"
+          }
+        ]
+      },
+      "type_defs": []
+    }
+  },
+  {
+    "contract": {
+      "functions": [
+        {
+          "arguments": [],
+          "name": "test_empty",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "bool"
+            },
+            {
+              "name": "b",
+              "type": "bool"
+            }
+          ],
+          "name": "test_bool",
+          "payable": false,
+          "returns": "bool",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "int"
+            }
+          ],
+          "name": "test_single_int",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "int"
+            },
+            {
+              "name": "b",
+              "type": "int"
+            },
+            {
+              "name": "c",
+              "type": "int"
+            },
+            {
+              "name": "d",
+              "type": "int"
+            }
+          ],
+          "name": "test_int",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "bytes": 2
+              }
+            }
+          ],
+          "name": "test_bytes",
+          "payable": false,
+          "returns": {
+            "bytes": 2
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "bytes": 32
+              }
+            }
+          ],
+          "name": "test_bytes32",
+          "payable": false,
+          "returns": {
+            "bytes": 32
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "address"
+            }
+          ],
+          "name": "test_account_address",
+          "payable": false,
+          "returns": "address",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "RemoteTest"
+            }
+          ],
+          "name": "test_contract_address",
+          "payable": false,
+          "returns": "RemoteTest",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.oracle_id"
+            }
+          ],
+          "name": "test_oracle_address",
+          "payable": false,
+          "returns": {
+            "oracle": [
+              "string",
+              "int"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.query_id"
+            }
+          ],
+          "name": "test_oracle_query_address",
+          "payable": false,
+          "returns": {
+            "oracle_query": [
+              "string",
+              "int"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "bits"
+            }
+          ],
+          "name": "test_bits",
+          "payable": false,
+          "returns": "bits",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "string"
+            }
+          ],
+          "name": "test_string",
+          "payable": false,
+          "returns": "string",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "list": [
+                  "int"
+                ]
+              }
+            }
+          ],
+          "name": "test_list",
+          "payable": false,
+          "returns": {
+            "list": [
+              "int"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "list": [
+                  {
+                    "list": [
+                      "int"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "test_nested_list",
+          "payable": false,
+          "returns": {
+            "list": [
+              {
+                "list": [
+                  "int"
+                ]
+              }
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "map": [
+                  "int",
+                  "bool"
+                ]
+              }
+            }
+          ],
+          "name": "test_simple_map",
+          "payable": false,
+          "returns": {
+            "map": [
+              "int",
+              "bool"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "map": [
+                  "int",
+                  {
+                    "map": [
+                      "int",
+                      "bool"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "test_nested_map",
+          "payable": false,
+          "returns": {
+            "map": [
+              "int",
+              {
+                "map": [
+                  "int",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.really_t"
+            }
+          ],
+          "name": "test_variants",
+          "payable": false,
+          "returns": "Test.really_t",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "Test.amount_t": [
+                  "int",
+                  "bool"
+                ]
+              }
+            }
+          ],
+          "name": "test_template_variants",
+          "payable": false,
+          "returns": {
+            "Test.amount_t": [
+              "int",
+              "bool"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "tuple": [
+                  "bool",
+                  "bool"
+                ]
+              }
+            }
+          ],
+          "name": "test_tuple",
+          "payable": false,
+          "returns": {
+            "tuple": [
+              "bool",
+              "bool"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "tuple": [
+                  {
+                    "tuple": [
+                      "bool",
+                      "bool"
+                    ]
+                  },
+                  {
+                    "tuple": [
+                      "bool",
+                      "bool"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "test_nested_tuple",
+          "payable": false,
+          "returns": {
+            "tuple": [
+              {
+                "tuple": [
+                  "bool",
+                  "bool"
+                ]
+              },
+              {
+                "tuple": [
+                  "bool",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.point"
+            }
+          ],
+          "name": "test_record",
+          "payable": false,
+          "returns": "Test.point",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.rectangle"
+            }
+          ],
+          "name": "test_nested_record",
+          "payable": false,
+          "returns": "Test.rectangle",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "list": [
+                  "Test.point"
+                ]
+              }
+            }
+          ],
+          "name": "test_records_list",
+          "payable": false,
+          "returns": {
+            "list": [
+              "Test.point"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "map": [
+                  "Test.point",
+                  "Test.point"
+                ]
+              }
+            }
+          ],
+          "name": "test_records_map",
+          "payable": false,
+          "returns": {
+            "map": [
+              "Test.point",
+              "Test.point"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.number"
+            }
+          ],
+          "name": "test_int_type",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Test.string_map"
+            }
+          ],
+          "name": "test_map_type",
+          "payable": false,
+          "returns": {
+            "map": [
+              "string",
+              "int"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "Test.box": [
+                  "int"
+                ]
+              }
+            }
+          ],
+          "name": "test_template_type",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "Test.amount_t": [
+                  {
+                    "Test.box": [
+                      "Test.rectangle"
+                    ]
+                  },
+                  "Test.really_t"
+                ]
+              }
+            }
+          ],
+          "name": "test_template_maze",
+          "payable": false,
+          "returns": {
+            "Test.amount_t": [
+              "Test.rectangle",
+              "Test.really_t"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Lib.data"
+            }
+          ],
+          "name": "test_lib_type",
+          "payable": false,
+          "returns": "int",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "option": [
+                  "int"
+                ]
+              }
+            }
+          ],
+          "name": "test_optional",
+          "payable": false,
+          "returns": {
+            "option": [
+              "int"
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "hash"
+            }
+          ],
+          "name": "test_hash",
+          "payable": false,
+          "returns": {
+            "bytes": 32
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "signature"
+            }
+          ],
+          "name": "test_signature",
+          "payable": false,
+          "returns": {
+            "bytes": 64
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Chain.ttl"
+            }
+          ],
+          "name": "test_ttl",
+          "payable": false,
+          "returns": "Chain.ttl",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "AENS.pointee"
+            }
+          ],
+          "name": "test_pointee",
+          "payable": false,
+          "returns": "AENS.pointee",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "AENS.name"
+            }
+          ],
+          "name": "test_aens_name",
+          "payable": false,
+          "returns": "AENS.name",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Chain.ga_meta_tx"
+            }
+          ],
+          "name": "test_ga_meta_tx",
+          "payable": false,
+          "returns": "Chain.ga_meta_tx",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Chain.paying_for_tx"
+            }
+          ],
+          "name": "test_paying_for_tx",
+          "payable": false,
+          "returns": "Chain.paying_for_tx",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": "Chain.base_tx"
+            }
+          ],
+          "name": "test_base_tx",
+          "payable": false,
+          "returns": "bool",
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "tuple": [
+                  "int",
+                  "bool",
+                  "string",
+                  "bits",
+                  {
+                    "bytes": 2
+                  },
+                  "hash",
+                  "signature"
+                ]
+              }
+            }
+          ],
+          "name": "test_primitives_tuple",
+          "payable": false,
+          "returns": {
+            "tuple": [
+              "int",
+              "bool",
+              "string",
+              "bits",
+              {
+                "bytes": 2
+              },
+              {
+                "bytes": 32
+              },
+              {
+                "bytes": 64
+              }
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "tuple": [
+                  "address",
+                  "RemoteTest",
+                  "Test.oracle_id",
+                  "Test.query_id"
+                ]
+              }
+            }
+          ],
+          "name": "test_addresses_tuple",
+          "payable": false,
+          "returns": {
+            "tuple": [
+              "address",
+              "RemoteTest",
+              {
+                "oracle": [
+                  "string",
+                  "int"
+                ]
+              },
+              {
+                "oracle_query": [
+                  "string",
+                  "int"
+                ]
+              }
+            ]
+          },
+          "stateful": false
+        },
+        {
+          "arguments": [
+            {
+              "name": "a",
+              "type": {
+                "tuple": [
+                  "Test.point",
+                  "Test.really_t",
+                  {
+                    "list": [
+                      "int"
+                    ]
+                  },
+                  {
+                    "map": [
+                      "int",
+                      "int"
+                    ]
+                  },
+                  {
+                    "tuple": [
+                      "int",
+                      "int"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "test_complex_tuple",
+          "payable": false,
+          "returns": {
+            "tuple": [
+              "Test.point",
+              "Test.really_t",
+              {
+                "list": [
+                  "int"
+                ]
+              },
+              {
+                "map": [
+                  "int",
+                  "int"
+                ]
+              },
+              {
+                "tuple": [
+                  "int",
+                  "int"
+                ]
+              }
+            ]
+          },
+          "stateful": false
+        }
+      ],
+      "kind": "contract_main",
+      "name": "Test",
+      "payable": false,
+      "type_defs": [
+        {
+          "name": "number",
+          "typedef": "int",
+          "vars": []
+        },
+        {
+          "name": "string_map",
+          "typedef": {
+            "map": [
+              "string",
+              "int"
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "box",
+          "typedef": "'a",
+          "vars": [
+            {
+              "name": "'a"
+            }
+          ]
+        },
+        {
+          "name": "oracle_id",
+          "typedef": {
+            "oracle": [
+              "string",
+              "int"
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "query_id",
+          "typedef": {
+            "oracle_query": [
+              "string",
+              "int"
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "point",
+          "typedef": {
+            "record": [
+              {
+                "name": "x",
+                "type": "int"
+              },
+              {
+                "name": "y",
+                "type": "int"
+              }
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "rectangle",
+          "typedef": {
+            "record": [
+              {
+                "name": "origin",
+                "type": "Test.point"
+              },
+              {
+                "name": "a",
+                "type": "int"
+              },
+              {
+                "name": "b",
+                "type": "int"
+              }
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "really_t",
+          "typedef": {
+            "variant": [
+              {
+                "Nope": []
+              },
+              {
+                "No": []
+              },
+              {
+                "Yep": [
+                  "int"
+                ]
+              },
+              {
+                "Yes": []
+              }
+            ]
+          },
+          "vars": []
+        },
+        {
+          "name": "amount_t",
+          "typedef": {
+            "variant": [
+              {
+                "Zero": []
+              },
+              {
+                "Any": [
+                  "'a",
+                  "'b",
+                  "int",
+                  "'a"
+                ]
+              }
+            ]
+          },
+          "vars": [
+            {
+              "name": "'a"
+            },
+            {
+              "name": "'b"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

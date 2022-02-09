@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import test from '@aeternity/aepp-calldata';
+import { encode } from '@aeternity/aepp-calldata/src/utils/base64check';
+
+console.log('test', test);
+console.log('test', encode([1, 2, 3]));
 
 ReactDOM.render(
   <React.StrictMode>

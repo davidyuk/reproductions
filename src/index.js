@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const blake = require('blakejs')
+
+console.log(blake.blake2bHex('abc'))
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

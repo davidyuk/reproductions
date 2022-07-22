@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+  },
+  "typedocOptions": {
+    "entryPoints": ["index.ts"],
+    "out": "docs"
+  }
+}
+

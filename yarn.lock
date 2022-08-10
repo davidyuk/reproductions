@@ -10785,6 +10785,11 @@ uuid@^8.3.0, uuid@^8.3.2:
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
+uuid@^9.0.0-beta.0:
+  version "9.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0-beta.0.tgz#164a23bd9bc422462a1274e64d34ab7a8dc3f31b"
+  integrity sha512-FYW2Ry9thUvDKQKekvKvQhGifh6X4FYAkbN56sYD6l4Zh8EG3GyIiqRKEq9UuIEPO/I1u/grfQxlRjTgnLxvMw==
+
 v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz"

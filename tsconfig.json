@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "strict": true,
+    "declaration": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "./docs/api",
+    "excludeExternals": true,
+    "treatWarningsAsErrors": true,
+    "plugin": ["typedoc-plugin-missing-exports"],
+    "readme": "none"
+  }
+}
